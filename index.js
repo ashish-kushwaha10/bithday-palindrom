@@ -2,15 +2,9 @@ var birthDate = document.querySelector("#birthdate");
 var submitButton = document.querySelector("#submit-btn");
 var output = document.querySelector("#output");
 var daysInMonth = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
-var gifTimeOut;
 
-submitButton.addEventListener("click", () => {
-  clearTimeout(gifTimeOut);
-  output.innerHTML = `<img src='./images/loading.gif' ></img>`;
-  gifTimeOut = setTimeout(() => {
-    clickHandler();
-  }, 2000);
-});
+
+submitButton.addEventListener("click", () => clickHandler());
 
 function reverseString(str) {
   var listOfChars = str.split("");
